@@ -6,7 +6,7 @@
 
 ---
 
-## 📁 Projects Overview
+##  Projects Overview
 
 | Project | Title | File |
 |---------|-------|------|
