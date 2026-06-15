@@ -5,7 +5,17 @@
   Tools  : Python, PyCryptodome
   Covers : AES (CBC & GCM), RSA (OAEP), SHA-256/SHA-512,
            HMAC, Password Hashing (PBKDF2), Digital Signatures
-============================================================
+============================================================\
+"""
+SECURITY NOTE:
+This project is intended only for educational demonstration.
+
+Cryptographic keys are returned and displayed with ciphertext only to
+demonstrate encryption and decryption. In real-world applications,
+keys must be stored securely and separately from encrypted data.
+
+AES-GCM is preferred because it provides confidentiality, integrity,
+and authenticity. AES-CBC is included only for educational comparison.
 """
 
 import os
@@ -203,7 +213,7 @@ class PasswordHasher:
     Secure password storage using PBKDF2-HMAC-SHA256.
     Never store plaintext or simple MD5/SHA1 passwords!
     """
-    ITERATIONS = 600_000   # NIST SP 800-132 recommendation (2023)
+    ITERATIONS = 600_000   # High iteration count used for educational demonstration
 
     def hash_password(self, password: str) -> dict:
         salt = get_random_bytes(32)
@@ -248,7 +258,7 @@ def run_demo():
     # ── AES Demo ──────────────────────────────────────────
     separator("AES ENCRYPTION")
     aes = AESCipher(key_size_bits=256)
-    msg = "Top-secret internship data: salary = ₹10,00,000/yr 😄"
+    msg = "Confidential cybersecurity internship project data."
 
     print(f"\n[+] Plaintext : {msg}")
 
@@ -320,7 +330,7 @@ def run_demo():
     # ── Password Hashing Demo ─────────────────────────────
     separator("PASSWORD HASHING — PBKDF2 WITH SALT")
     ph = PasswordHasher()
-    password = "MySuperSecret@2024"
+    password = "DemoPassword@123"
     stored   = ph.hash_password(password)
     print(f"\n[+] Password          : {password}")
     print(f"[+] Salt (b64)        : {stored['salt_b64'][:32]}…")
