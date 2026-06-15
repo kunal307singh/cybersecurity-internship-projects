@@ -8,7 +8,16 @@
   Models : Random Forest, Isolation Forest (anomaly), SVM
 ============================================================
 """
+"""
+PROJECT LIMITATION:
 
+This project uses synthetic KDD-inspired network traffic data for
+educational demonstration. The reported accuracy should not be
+interpreted as real-world IDS performance.
+
+A production-level version should be evaluated using real datasets
+such as NSL-KDD, CIC-IDS2017, or network flow data extracted from PCAP files.
+"""
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier, IsolationForest
@@ -180,12 +189,18 @@ class IntrusionDetectionSystem:
         y_multi  = self.le.fit_transform(df["label"])
         y_binary = (df["label"] != "normal").astype(int).values
 
-        X_scaled = self.scaler.fit_transform(X)
-
+        
         X_tr, X_te, ym_tr, ym_te, yb_tr, yb_te = train_test_split(
-            X_scaled, y_multi, y_binary,
-            test_size=0.2, random_state=42, stratify=y_multi
+            X, y_multi, y_binary,
+            test_size=0.2,
+            random_state=42,
+            stratify=y_multi
         )
+
+        X_tr = self.scaler.fit_transform(X_tr)
+        X_te = self.scaler.transform(X_te)
+    
+        
 
         print("\n  [1/3] Training Random Forest (multi-class) …", end="", flush=True)
         t0 = time.time()
@@ -199,7 +214,10 @@ class IntrusionDetectionSystem:
 
         print("  [3/3] Training Isolation Forest (anomaly) …", end="", flush=True)
         t0 = time.time()
-        self.iso_forest.fit(X_scaled)
+        normal_label = self.le.transform(["normal"])[0]
+        normal_training_data = X_tr[ym_tr == normal_label]
+
+        self.iso_forest.fit(normal_training_data)
         print(f" {time.time()-t0:.2f}s")
 
         self.trained = True
