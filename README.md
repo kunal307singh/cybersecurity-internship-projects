@@ -17,10 +17,10 @@
 
 ## 🔍 Project 3 — Intrusion Detection System (IDS) with Machine Learning
 
-### 📌 Objective
+###  Objective
 Design and implement an IDS that uses machine learning algorithms to detect malicious network activity based on traffic patterns.
 
-### 🧠 How It Works
+###  How It Works
 1. **Dataset Generation** — 20,000 synthetic network traffic flows are generated (KDD Cup 99 inspired), covering 5 attack categories.
 2. **Model Training** — Three ML models are trained:
    - **Random Forest** — Multi-class attack classification
@@ -29,7 +29,7 @@ Design and implement an IDS that uses machine learning algorithms to detect mali
 3. **Alert Engine** — Severity-based alerting system (INFO → LOW → MEDIUM → HIGH → CRITICAL)
 4. **Live Simulation** — 5 test IPs are classified in real-time
 
-### 🗂️ Attack Types Detected
+### Attack Types Detected
 
 | Attack | Description |
 |--------|-------------|
@@ -39,13 +39,13 @@ Design and implement an IDS that uses machine learning algorithms to detect mali
 | `r2l` | Remote-to-Local exploit (brute-force SSH) |
 | `u2r` | User-to-Root privilege escalation |
 
-### 🛠️ Technologies Used
+### Technologies Used
 - Python 3
 - Scikit-learn (Random Forest, SVM, Isolation Forest)
 - NumPy, Pandas
 - Matplotlib
 
-### ▶️ How to Run
+### How to Run
 
 ```bash
 # Install dependencies
@@ -55,7 +55,7 @@ pip install numpy pandas scikit-learn matplotlib
 python ids_ml_Kunal_Singh.py
 ```
 
-### 📊 Expected Output
+### Expected Output
 ```
 ████████████████████████████████████████████████████████████
    INTRUSION DETECTION SYSTEM — ML-BASED  (PROJECT 3)
@@ -85,7 +85,7 @@ python ids_ml_Kunal_Singh.py
   └──────────────────────────────────────────────────────┘
 ```
 
-### ✅ Skills Learned
+###  Skills Learned
 - Machine learning for cybersecurity
 - Network traffic analysis
 - Anomaly detection
@@ -93,12 +93,12 @@ python ids_ml_Kunal_Singh.py
 
 ---
 
-## 🔐 Project 6 — Cryptography Algorithms Implementation
+##  Project 6 — Cryptography Algorithms Implementation
 
-### 📌 Objective
+###  Objective
 Implement popular cryptography algorithms like AES, RSA, and SHA to understand encryption, decryption, and secure communication processes.
 
-### 🧠 How It Works
+###  How It Works
 The toolkit implements 5 major cryptographic components:
 
 1. **AES Cipher** — Symmetric encryption in CBC and GCM modes
@@ -107,7 +107,7 @@ The toolkit implements 5 major cryptographic components:
 4. **HMAC Utils** — Message authentication with constant-time comparison
 5. **Password Hasher** — Secure password storage using PBKDF2 with salt
 
-### 🗂️ Algorithms Implemented
+###  Algorithms Implemented
 
 | Algorithm | Mode/Type | Purpose |
 |-----------|-----------|---------|
@@ -119,12 +119,12 @@ The toolkit implements 5 major cryptographic components:
 | HMAC-SHA256 | MAC | Message authentication |
 | PBKDF2-HMAC-SHA256 | Key Derivation | Secure password storage |
 
-### 🛠️ Technologies Used
+###  Technologies Used
 - Python 3
 - PyCryptodome
 - hashlib, hmac (Python standard library)
 
-### ▶️ How to Run
+###  How to Run
 
 ```bash
 # Install dependencies
@@ -134,7 +134,7 @@ pip install pycryptodome
 python crypto_toolkit_Kunal_Singh.py
 ```
 
-### 📊 Expected Output
+###  Expected Output
 ```
 ████████████████████████████████████████████████████████████
    CRYPTOGRAPHY ALGORITHMS IMPLEMENTATION — PROJECT 6
@@ -164,7 +164,7 @@ python crypto_toolkit_Kunal_Singh.py
 ══════════════════════════════════════════════════════════
 ```
 
-### ✅ Skills Learned
+###  Skills Learned
 - Cryptography fundamentals
 - Symmetric and asymmetric encryption
 - Digital signatures and verification
@@ -173,7 +173,7 @@ python crypto_toolkit_Kunal_Singh.py
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 ```
 numpy
@@ -185,7 +185,7 @@ pycryptodome
 
 ---
 
-## 👤 Author
+## Author
 
 **Kunal Singh**  
 Cybersecurity Intern — Codec Technologies  
