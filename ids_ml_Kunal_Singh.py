@@ -179,7 +179,8 @@ class IntrusionDetectionSystem:
         self.le        = LabelEncoder()
         self.rf        = RandomForestClassifier(n_estimators=100, n_jobs=-1, random_state=42)
         self.svm       = SVC(kernel="rbf", C=1.0, probability=True, random_state=42)
-        self.iso_forest = IsolationForest(n_estimators=100, contamination=0.50,
+        self.iso_forest = IsolationForest(n_estimators=100, 
+                                          contamination=0.05,
                                           random_state=42)
         self.trained   = False
 
