@@ -15,7 +15,7 @@
 
 ---
 
-## 🔍 Project 3 — Intrusion Detection System (IDS) with Machine Learning
+## Project 3 — Intrusion Detection System (IDS) with Machine Learning
 
 ###  Objective
 Design and implement an IDS that uses machine learning algorithms to detect malicious network activity based on traffic patterns.
