@@ -27,7 +27,7 @@ Design and implement an IDS that uses machine learning algorithms to detect mali
    - **SVM (RBF Kernel)** — Binary classification (Normal vs Attack)
    - **Isolation Forest** — Unsupervised anomaly/zero-day detection
 3. **Alert Engine** — Severity-based alerting system (INFO → LOW → MEDIUM → HIGH → CRITICAL)
-4. **Live Simulation** — 5 test IPs are classified in real-time
+4. **Synthetic Traffic Prediction Demo** — 5 simulated traffic cases are classified
 
 ### Attack Types Detected
 
