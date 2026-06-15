@@ -1,4 +1,4 @@
-# 🛡️ Cybersecurity Internship Projects
+# Cybersecurity Internship Projects
 
 **Author:** Kunal Singh  
 **Internship Organization:** Codec Technologies  
